@@ -16,20 +16,78 @@
     </thead>
     <tbody>
     
-    <%x=0%>
-    <% @courses.each do |course| %>
-    <%x+=1%>
-      <tr>
-        <td><%= course.campus %></td>
-        <td><%= course.haksu %></td>
-        <td><%= course.bunban %></td>
-        <td><%= course.isu_type %></td>
-        <td><%= course.course_name %></td>
-        <td><%= course.lecturer %></td>
-        <td><%= course.credit %></td>
-        <td><%= course.rate.to_f/5.0%>:1</td>
-      </tr>
-    <% end %>
+
+
+        <tr>
+          <td><%= @courses.find(current_user.sel1).campus %></td>
+          <td><%= @courses.find(current_user.sel1).haksu %></td>
+          <td><%= @courses.find(current_user.sel1).bunban %></td>
+          <td><%= @courses.find(current_user.sel1).isu_type %></td>
+          <td><%= @courses.find(current_user.sel1).course_name %></td>
+          <td><%= @courses.find(current_user.sel1).lecturer %></td>
+          <td><%= @courses.find(current_user.sel1).credit %></td>
+          <td><%= @courses.find(current_user.sel1).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel2).campus %></td>
+          <td><%= @courses.find(current_user.sel2).haksu %></td>
+          <td><%= @courses.find(current_user.sel2).bunban %></td>
+          <td><%= @courses.find(current_user.sel2).isu_type %></td>
+          <td><%= @courses.find(current_user.sel2).course_name %></td>
+          <td><%= @courses.find(current_user.sel2).lecturer %></td>
+          <td><%= @courses.find(current_user.sel2).credit %></td>
+          <td><%= @courses.find(current_user.sel2).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel3).campus %></td>
+          <td><%= @courses.find(current_user.sel3).haksu %></td>
+          <td><%= @courses.find(current_user.sel3).bunban %></td>
+          <td><%= @courses.find(current_user.sel3).isu_type %></td>
+          <td><%= @courses.find(current_user.sel3).course_name %></td>
+          <td><%= @courses.find(current_user.sel3).lecturer %></td>
+          <td><%= @courses.find(current_user.sel3).credit %></td>
+          <td><%= @courses.find(current_user.sel3).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel4).campus %></td>
+          <td><%= @courses.find(current_user.sel4).haksu %></td>
+          <td><%= @courses.find(current_user.sel4).bunban %></td>
+          <td><%= @courses.find(current_user.sel4).isu_type %></td>
+          <td><%= @courses.find(current_user.sel4).course_name %></td>
+          <td><%= @courses.find(current_user.sel4).lecturer %></td>
+          <td><%= @courses.find(current_user.sel4).credit %></td>
+          <td><%= @courses.find(current_user.sel4).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel5).campus %></td>
+          <td><%= @courses.find(current_user.sel5).haksu %></td>
+          <td><%= @courses.find(current_user.sel5).bunban %></td>
+          <td><%= @courses.find(current_user.sel5).isu_type %></td>
+          <td><%= @courses.find(current_user.sel5).course_name %></td>
+          <td><%= @courses.find(current_user.sel5).lecturer %></td>
+          <td><%= @courses.find(current_user.sel5).credit %></td>
+          <td><%= @courses.find(current_user.sel5).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel6).campus %></td>
+          <td><%= @courses.find(current_user.sel6).haksu %></td>
+          <td><%= @courses.find(current_user.sel6).bunban %></td>
+          <td><%= @courses.find(current_user.sel6).isu_type %></td>
+          <td><%= @courses.find(current_user.sel6).course_name %></td>
+          <td><%= @courses.find(current_user.sel6).lecturer %></td>
+          <td><%= @courses.find(current_user.sel6).credit %></td>
+          <td><%= @courses.find(current_user.sel6).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel7).campus %></td>
+          <td><%= @courses.find(current_user.sel7).haksu %></td>
+          <td><%= @courses.find(current_user.sel7).bunban %></td>
+          <td><%= @courses.find(current_user.sel7).isu_type %></td>
+          <td><%= @courses.find(current_user.sel7).course_name %></td>
+          <td><%= @courses.find(current_user.sel7).lecturer %></td>
+          <td><%= @courses.find(current_user.sel7).credit %></td>
+          <td><%= @courses.find(current_user.sel7).rate.to_f/5.0%>:1</td>
+        </tr>
 
     </tbody>
 </table>

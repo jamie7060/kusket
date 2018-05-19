@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180519130734) do
+ActiveRecord::Schema.define(version: 20180519140640) do
 
   create_table "gwamoks", force: :cascade do |t|
     t.string   "campus"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20180519130734) do
     t.string   "lecturer"
     t.string   "credit"
     t.string   "rate"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "checkbox",    default: false
   end
 
   create_table "users", force: :cascade do |t|

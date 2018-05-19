@@ -13,14 +13,14 @@ class HomeController < ApplicationController
     
 
 
-    for x in (1..32)
+    for x in (1..138)
       
      
       campus = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(1)").inner_text.strip
       haksu = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(2)").inner_text.strip
       bunban = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(3)").inner_text.strip
       isu_type = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(4)").inner_text.strip
-      course_name = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(5)").inner_text.gsub!(/\s+/, '')
+      course_name = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(5)").inner_text.strip
       lecturer = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(6)").inner_text.strip
       credit = page.css(".page//table//tr:nth-child(#{x})//td:nth-child(7)").inner_text.strip
 
@@ -75,6 +75,22 @@ class HomeController < ApplicationController
 
 
   def mypage
+    @courses = Gwamok.all
+  end
+
+  def submit
+    courses = Gwamok.all 
+    x=0
+    courses.each do |course|
+    x+=1
+    if params[:"rate#{x}"]
+    course.rate+=1
+    course.save
+    end
+  end
+    redirect_to '/home/mypage'
+    # Current_user.sel1="#{x}"
+  
   end
 end
 

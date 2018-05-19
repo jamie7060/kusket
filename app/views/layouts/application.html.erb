@@ -13,10 +13,17 @@
   <p class="alert"><%= alert %></p>
   -->
 
+
     <% if user_signed_in? %>
-      <nav>
+      <div class = "my-4 text-center">
+        <%= link_to 'KUSKET', home_index_url%>
+      </div>
+
+      <nav class = "nav nav-bg justify-content-end">
+        <%= link_to 'My_Basket', home_index_url, class: "nav-link nav-font"%>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link nav-font"%>            
       </nav>
-      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+
     <% end %>
 
     <%= yield %>

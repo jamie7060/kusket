@@ -1,7 +1,7 @@
 <div class="container">
-<h1 class="text-center mt-5">경쟁률페이지</h1>
+<strong><h4 class="text-center mt-5">경쟁률 조회</h4></strong>
 
-<table class="table">
+<table class="table table-font">
     <thead>
     <tr>
         <th>캠퍼스</th>
@@ -14,10 +14,13 @@
         <th>선택</th>
     </tr>
     </thead>
+
     <tbody>
     
-    
+    <form action="/home/submit" method="get">
+    <%x=0%>
     <% @courses.each do |course| %>
+    <%x+=1%>
       <tr>
         <td><%= course.campus %></td>
         <td><%= course.haksu %></td>
@@ -26,10 +29,13 @@
         <td><%= course.course_name %></td>
         <td><%= course.lecturer %></td>
         <td><%= course.credit %></td>
-        <td><%= %></td>
+        <td><%= check_box_tag(:"rate#{x}")%></td>
       </tr>
-    <% end %>
-   
+
+     <% end %>
+
+    <input type="submit" value="확정">	
+    </form>
     </tbody>
 </table>
 </div>

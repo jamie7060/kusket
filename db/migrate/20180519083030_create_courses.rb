@@ -4,11 +4,11 @@ class CreateCourses < ActiveRecord::Migration[5.0]
 
       t.string :campus
       t.string :haksu
-      t.integer :bunban
+      t.string :bunban
       t.string :isu_type
       t.string :course_name
       t.string :lecturer
-      t.integer :credit
+      t.string :credit
       t.integer :rate
 
       t.timestamps

@@ -1,0 +1,28 @@
+<h1>소개페이지(1번)</h1>
+
+
+<!--로그인 폼-->
+<% if user_signed_in? %>
+<%=current_user.username %><p>님 반갑습니다 !</p>
+<a href="http://localhost:3000/home/rate">시작하기</a>
+<% else %>
+  <%= form_for("user", :url => user_session_path) do |f| %>
+   
+    <div>
+      <%= f.label :이메일 %><br />
+      <%= f.email_field :email, :autofocus => true %>
+    </div>
+    
+    <div>
+      <%= f.label :비밀번호 %><br />
+      <%= f.password_field :password %>
+    </div>
+
+    <% if devise_mapping.rememberable? -%>
+      <div><%= f.check_box :remember_me %> <%= f.label :아이디저장 %></div>
+    <% end -%>
+    <div><%= f.submit "시작하기" %></div>
+      <%= link_to "아직 회원이 아니라면?", new_user_registration_path%>
+      
+<% end %>
+<% end%>

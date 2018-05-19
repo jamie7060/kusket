@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180519083030) do
+ActiveRecord::Schema.define(version: 20180519140640) do
 
-  create_table "courses", force: :cascade do |t|
+  create_table "gwamoks", force: :cascade do |t|
     t.string   "campus"
     t.string   "haksu"
     t.string   "bunban"
@@ -21,11 +21,19 @@ ActiveRecord::Schema.define(version: 20180519083030) do
     t.string   "lecturer"
     t.string   "credit"
     t.integer  "rate"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "checkbox",    default: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "sel1"
+    t.string   "sel2"
+    t.string   "sel3"
+    t.string   "sel4"
+    t.string   "sel5"
+    t.string   "sel6"
+    t.string   "sel7"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

@@ -1,19 +1,94 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<!-- saved from url=(0081)http://sugang.korea.ac.kr/lecture/LecSugangFrame.jsp?url=LecMajorSub.jsp&lang=KOR -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>��������</title>
-<script language="JavaScript" src="./&#4361;&#4462;&#4363;&#4453;&#4536;&#4364;&#4453;&#4540;&#4359;&#4457;_files/frame.js"></script></head>
+<div class="container">
+<h1 class="text-center mt-5">경쟁률페이지</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>캠퍼스</th>
+        <th>학수번호</th>
+        <th>분반</th>
+        <th>이수구분</th>
+        <th>교과목명</th>
+        <th>담당교수</th>
+        <th>학점</th>
+        <th>경쟁률</th>
+    </tr>
+    </thead>
+    <tbody>
+    
 
 
-<!-- <script language="JavaScript">
-checkFrame();
-</script> -->
+        <tr>
+          <td><%= @courses.find(current_user.sel1).campus %></td>
+          <td><%= @courses.find(current_user.sel1).haksu %></td>
+          <td><%= @courses.find(current_user.sel1).bunban %></td>
+          <td><%= @courses.find(current_user.sel1).isu_type %></td>
+          <td><%= @courses.find(current_user.sel1).course_name %></td>
+          <td><%= @courses.find(current_user.sel1).lecturer %></td>
+          <td><%= @courses.find(current_user.sel1).credit %></td>
+          <td><%= @courses.find(current_user.sel1).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel2).campus %></td>
+          <td><%= @courses.find(current_user.sel2).haksu %></td>
+          <td><%= @courses.find(current_user.sel2).bunban %></td>
+          <td><%= @courses.find(current_user.sel2).isu_type %></td>
+          <td><%= @courses.find(current_user.sel2).course_name %></td>
+          <td><%= @courses.find(current_user.sel2).lecturer %></td>
+          <td><%= @courses.find(current_user.sel2).credit %></td>
+          <td><%= @courses.find(current_user.sel2).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel3).campus %></td>
+          <td><%= @courses.find(current_user.sel3).haksu %></td>
+          <td><%= @courses.find(current_user.sel3).bunban %></td>
+          <td><%= @courses.find(current_user.sel3).isu_type %></td>
+          <td><%= @courses.find(current_user.sel3).course_name %></td>
+          <td><%= @courses.find(current_user.sel3).lecturer %></td>
+          <td><%= @courses.find(current_user.sel3).credit %></td>
+          <td><%= @courses.find(current_user.sel3).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel4).campus %></td>
+          <td><%= @courses.find(current_user.sel4).haksu %></td>
+          <td><%= @courses.find(current_user.sel4).bunban %></td>
+          <td><%= @courses.find(current_user.sel4).isu_type %></td>
+          <td><%= @courses.find(current_user.sel4).course_name %></td>
+          <td><%= @courses.find(current_user.sel4).lecturer %></td>
+          <td><%= @courses.find(current_user.sel4).credit %></td>
+          <td><%= @courses.find(current_user.sel4).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel5).campus %></td>
+          <td><%= @courses.find(current_user.sel5).haksu %></td>
+          <td><%= @courses.find(current_user.sel5).bunban %></td>
+          <td><%= @courses.find(current_user.sel5).isu_type %></td>
+          <td><%= @courses.find(current_user.sel5).course_name %></td>
+          <td><%= @courses.find(current_user.sel5).lecturer %></td>
+          <td><%= @courses.find(current_user.sel5).credit %></td>
+          <td><%= @courses.find(current_user.sel5).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel6).campus %></td>
+          <td><%= @courses.find(current_user.sel6).haksu %></td>
+          <td><%= @courses.find(current_user.sel6).bunban %></td>
+          <td><%= @courses.find(current_user.sel6).isu_type %></td>
+          <td><%= @courses.find(current_user.sel6).course_name %></td>
+          <td><%= @courses.find(current_user.sel6).lecturer %></td>
+          <td><%= @courses.find(current_user.sel6).credit %></td>
+          <td><%= @courses.find(current_user.sel6).rate.to_f/5.0%>:1</td>
+        </tr>
+                <tr>
+          <td><%= @courses.find(current_user.sel7).campus %></td>
+          <td><%= @courses.find(current_user.sel7).haksu %></td>
+          <td><%= @courses.find(current_user.sel7).bunban %></td>
+          <td><%= @courses.find(current_user.sel7).isu_type %></td>
+          <td><%= @courses.find(current_user.sel7).course_name %></td>
+          <td><%= @courses.find(current_user.sel7).lecturer %></td>
+          <td><%= @courses.find(current_user.sel7).credit %></td>
+          <td><%= @courses.find(current_user.sel7).rate.to_f/5.0%>:1</td>
+        </tr>
 
-<frameset rows="*,0">
-    <frame name="ILec" src="./&#4361;&#4462;&#4363;&#4453;&#4536;&#4364;&#4453;&#4540;&#4359;&#4457;_files/LecMajorSub.html" marginwidth="0" marginheight="0" scrolling="auto" frameborder="0">
-    <frame name="ITemp" src="./&#4361;&#4462;&#4363;&#4453;&#4536;&#4364;&#4453;&#4540;&#4359;&#4457;_files/blank.html" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" noresize="">
-</frameset>
-
-
-</html>
+    </tbody>
+</table>
+</div>

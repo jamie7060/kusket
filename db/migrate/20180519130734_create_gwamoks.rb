@@ -1,7 +1,6 @@
-class CreateCourses < ActiveRecord::Migration[5.0]
+class CreateGwamoks < ActiveRecord::Migration[5.0]
   def change
-    create_table :courses do |t|
-
+    create_table :gwamoks do |t|
       t.string :campus
       t.string :haksu
       t.string :bunban

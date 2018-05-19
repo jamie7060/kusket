@@ -1,0 +1,2 @@
+class Gwamok < ApplicationRecord
+end

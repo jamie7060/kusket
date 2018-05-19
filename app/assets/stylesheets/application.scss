@@ -1,0 +1,65 @@
+@import "bootstrap";
+
+body.firstbg{
+    background-image: image-url('kusket_background.png');
+    height: 100%;
+
+}
+
+.fill{
+  min-height: 100%;
+  height: 100%;
+
+}
+
+.form-width{
+ width:340px;
+
+}
+
+.form-height{
+ height:30px;
+
+}
+
+.im{
+margin-top: 100px;
+
+}
+
+.loginback{
+ background-color: white;
+ width:380px;
+ height:500px;
+ border-radius: 25px;
+
+ box-shadow: 7px 7px 5px rgba(0,0,0,0.3);
+}
+
+.title{
+  margin-top: 30px;
+ margin-bottom: 70px;
+ font-family: 'Muli', sans-serif;
+}
+
+.left{
+  margin-left:auto;
+   margin-right:auto;
+   display:block;
+
+}
+
+.form-group{
+  margin-left: 10px;
+  font-family: 'Muli', sans-serif;
+}
+
+.hangeul{
+font-family: 'Nanum Gothic', sans-serif;
+
+}
+
+.right{
+
+
+}

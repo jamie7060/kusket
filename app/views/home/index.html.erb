@@ -1,28 +1,87 @@
-<h1>소개페이지(1번)</h1>
+<!doctype html>
 
+<style>
+ html{
+   height: 100%;
+ }
+body{
+  height: 100%
 
-<!--로그인 폼-->
-<% if user_signed_in? %>
-<%=current_user.username %><p>님 반갑습니다 !</p>
-<a href="http://localhost:3000/home/rate">시작하기</a>
-<% else %>
-  <%= form_for("user", :url => user_session_path) do |f| %>
-   
-    <div>
-      <%= f.label :이메일 %><br />
-      <%= f.email_field :email, :autofocus => true %>
-    </div>
-    
-    <div>
-      <%= f.label :비밀번호 %><br />
-      <%= f.password_field :password %>
-    </div>
+}
+@import url('https://fonts.googleapis.com/css?family=Muli|Nanum+Gothic');
+ </style>
 
-    <% if devise_mapping.rememberable? -%>
-      <div><%= f.check_box :remember_me %> <%= f.label :아이디저장 %></div>
-    <% end -%>
-    <div><%= f.submit "시작하기" %></div>
-      <%= link_to "아직 회원이 아니라면?", new_user_registration_path%>
-      
-<% end %>
-<% end%>
+<html lang="en">
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="index.scss" rel="stylesheet" type="text/css">
+    </head>
+
+    <body class="firstbg fill">
+
+    <!--전체 div -->
+    <div class="d-flex row container-fluid fill">
+
+      <!--왼쪽 소개글 -->
+      <div class="left col d-flex container flex-column">
+
+              <div class="im d-flex justify-content-center align-self-center">
+                <%= image_tag("logo.png")%>
+              </div>
+      </div>
+
+      <!-- 오른쪽 로그인 -->
+      <div class="right col container">
+
+        <!--로그인 폼-->
+            <% if user_signed_in? %>
+            <%=current_user.username %><p>님 반갑습니다 !</p>
+              <a href="http://localhost:3000/home/rate">시작하기</a>
+            <% else %>
+            <%= form_for("user", :url => user_session_path) do |f| %>
+
+        <div class="d-flex container justify-content-center">
+            <div class="loginback d-flex justify-content-center flex-column">
+
+                  <h1 class="title d-flex justify-content-center text-muted"> LOG IN </h1>
+
+            <div class="form-group p-2 justify-content-center">
+              <%= f.label :email %><br>
+              <%= f.email_field :email, :autofocus => true, class: "form-width form-height" %>
+            </div>
+
+            <div class="form-group p-2 justify-content-center">
+
+              <%= f.label :password %>
+              <%= f.password_field :password, class: "form-width form-height" %>
+          </div>
+
+            <div class="hangeul d-flex p-2 justify-content-center">
+              <%= f.submit "시작하기", class: "btn btn-outline-danger p-2 form-width " %>
+           </div>
+
+            <div class="hangeul d-flex justify-content-center">
+                <%= link_to "회원가입", new_user_registration_path, class: "text-secondary p-2  "%>
+            </div>
+
+          <!--loginback div ends-->
+          </div>
+            <% end %>
+            <% end%>
+
+            <!--container div ends-->
+          </div>
+
+          <!--오른쪽 div ends-->
+      </div>
+
+      <!--전체 div ends-->
+      </div>
+
+    </body>

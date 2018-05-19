@@ -1,9 +1,31 @@
+<<<<<<< HEAD
 
 <h1>경쟁률 조회</h1>
 
 <p>학교 뭐시기 경쟁률~</p>
 <a href="http://localhost:3000/home/mypage">확정</a>
 
+=======
+<div class="container">
+<h1 class="text-center mt-5">경쟁률페이지</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>캠퍼스</th>
+        <th>학수번호</th>
+        <th>분반</th>
+        <th>이수구분</th>
+        <th>교과목명</th>
+        <th>담당교수</th>
+        <th>학점</th>
+        <th>선택</th>
+    </tr>
+    </thead>
+    <tbody>
+    
+    
+>>>>>>> c9f8430be85911f7a86272ff1c85fadf07ba4be5
     <% @courses.each do |course| %>
       <tr>
         <td><%= course.campus %></td>
@@ -13,5 +35,15 @@
         <td><%= course.course_name %></td>
         <td><%= course.lecturer %></td>
         <td><%= course.credit %></td>
+<<<<<<< HEAD
       </tr>
     <% end %>
+=======
+        <td><%= %></td>
+      </tr>
+    <% end %>
+   
+    </tbody>
+</table>
+</div>
+>>>>>>> c9f8430be85911f7a86272ff1c85fadf07ba4be5

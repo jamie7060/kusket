@@ -12,19 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20180519130734) do
 
-  create_table "courses", force: :cascade do |t|
-    t.string   "campus"
-    t.string   "haksu"
-    t.string   "bunban"
-    t.string   "isu_type"
-    t.string   "course_name"
-    t.string   "lecturer"
-    t.string   "credit"
-    t.integer  "rate"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "gwamoks", force: :cascade do |t|
     t.string   "campus"
     t.string   "haksu"

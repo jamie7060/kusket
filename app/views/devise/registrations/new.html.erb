@@ -1,45 +1,64 @@
+<style>
+  html{
+    height: 100%;
+  }
+  body{
+    height: 100%;
+    background: linear-gradient(#BC4444, #6B1A14);
+    background-repeat: no-repeat;
+  }
+</style>
 
 
-<!--로그인 폼-->
-<h2><%= t('.sign_up') %>(2번)</h2>
+<%=image_tag("join-image.png", class: "join-image")%>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class = "d-flex flex-column outer-form-box my-auto mx-auto">
+  <!--로그인 폼-->
+  <div class = "mt-4">
+    <h2 class = "text-center align-middle mb-1 mt-2 grey-font">Join Us</h2>
   </div>
-  <!--닉네임-->
-<div class="field">
-    <%= f.label :닉네임 %><br />
-    <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
-  </div>
- <!--학년-->
- <div class="field">
-    <%= f.label :학년 %><br />
-    <%= f.text_field :grade, autofocus: true, autocomplete: "grade" %>
-  </div>
- 
- 
+  <div class = "inner-form-box mx-auto px-5">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
 
+      <div class="field grey-font">
+        <%= f.label :email, class: "label-font mb-1 mt-4"%><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+      </div>
+      
+      <!--닉네임-->
+      <div class="field grey-font">
+        <%= f.label :닉네임, class: "label-font mb-1 mt-2"%><br />
+        <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+      </div>
+      
+      <!--학년-->
+      <div class="field grey-font">
+        <%= f.label :학년, class: "label-font mb-1 mt-2" %><br />
+        <%= f.text_field :grade, autofocus: true, autocomplete: "grade", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+      </div>
+      
+      
+      <div class="field grey-font">
+        <%= f.label :password, class: "label-font mb-1 mt-2" %>
+        <% if @minimum_password_length %>
+          <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off", class: "border-top-0 border-left-0 border-right-0 form-width"%>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+      <div class="field grey-font">
+        <%= f.label :password_confirmation, class: "label-font mb-1 mt-2" %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+      </div>
+
+      <div class="actions d-flex align-items-center">
+        <%= f.submit t('.sign_up'), class: 'btn mt-3 btn-danger'%>
+      </div>
+    <% end %>
+
+    <!--<%= render "devise/shared/links" %>-->
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit t('.sign_up') %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

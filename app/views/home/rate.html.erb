@@ -26,10 +26,12 @@
         <td><%= course.course_name %></td>
         <td><%= course.lecturer %></td>
         <td><%= course.credit %></td>
-        <td><%= %></td>
+        <td><input id="#{course.id}" name="accept" type="checkbox" value="1"></td>
       </tr>
     <% end %>
-   
+    <form action="/home/submit" method="get">
+    <input type="submit" value="확정">	
+    </form>
     </tbody>
 </table>
 </div>

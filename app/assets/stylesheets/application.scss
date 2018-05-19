@@ -1,0 +1,32 @@
+@import "bootstrap";
+
+.outer-form-box{
+    width: 388px;
+    height: 480px;
+    background-color: white;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    position: relative;
+    left: 120px;
+    z-index: 0;
+    
+}
+
+.inner-form-box{
+    width: 388px;
+    height: 400px;
+}
+
+.label-font{
+    font-size: 0.8rem;
+
+}
+
+.join-image{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 330px;
+    top: 180px;
+    z-index: -1;
+}

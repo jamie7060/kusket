@@ -75,20 +75,22 @@ class HomeController < ApplicationController
 
 
   def mypage
+    @courses = Gwamok.all
   end
 
   def submit
-    @courses = Gwamok.all 
-    
-    @courses.each do |course|
-    @accept = params[:accept]
-   
-    if @accept == 1
-     course.rate = course.rate.to_i + 1
+    courses = Gwamok.all 
+    x=0
+    courses.each do |course|
+    x+=1
+    if params[:"rate#{x}"]
+    course.rate+=1
+    course.save
     end
   end
+    redirect_to '/home/mypage'
+    # Current_user.sel1="#{x}"
   
-    redirect_to :back
   end
 end
 

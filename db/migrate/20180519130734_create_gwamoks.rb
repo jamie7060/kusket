@@ -8,7 +8,7 @@ class CreateGwamoks < ActiveRecord::Migration[5.0]
       t.string :course_name
       t.string :lecturer
       t.string :credit
-      t.string :rate
+      t.integer :rate
 
       t.timestamps
     end

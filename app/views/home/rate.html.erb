@@ -16,8 +16,10 @@
     </thead>
     <tbody>
     
-    
+    <form action="/home/submit" method="get">
+    <%x=0%>
     <% @courses.each do |course| %>
+    <%x+=1%>
       <tr>
         <td><%= course.campus %></td>
         <td><%= course.haksu %></td>
@@ -26,10 +28,11 @@
         <td><%= course.course_name %></td>
         <td><%= course.lecturer %></td>
         <td><%= course.credit %></td>
-        <td><input id="#{course.id}" name="accept" type="checkbox" value="1"></td>
+        <td><%= check_box_tag(:"rate#{x}")%></td>
       </tr>
-    <% end %>
-    <form action="/home/submit" method="get">
+
+     <% end %>
+
     <input type="submit" value="확정">	
     </form>
     </tbody>

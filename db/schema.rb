@@ -20,13 +20,20 @@ ActiveRecord::Schema.define(version: 20180519140640) do
     t.string   "course_name"
     t.string   "lecturer"
     t.string   "credit"
-    t.string   "rate"
+    t.integer  "rate"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false
     t.boolean  "checkbox",    default: false
   end
 
   create_table "users", force: :cascade do |t|
+    t.string   "sel1"
+    t.string   "sel2"
+    t.string   "sel3"
+    t.string   "sel4"
+    t.string   "sel5"
+    t.string   "sel6"
+    t.string   "sel7"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"

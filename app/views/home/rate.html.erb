@@ -1,8 +1,8 @@
 <div class="container">
-<strong><h4 class="text-center mt-5">경쟁률 조회</h4></strong>
+<strong><h5 class="text-center mt-5">경쟁률 조회</h5></strong>
 
 <table class="table table-font">
-    <thead>
+    <thead class = "thead-light">
     <tr>
         <th>캠퍼스</th>
         <th>학수번호</th>
@@ -16,26 +16,26 @@
     </thead>
 
     <tbody>
+        <form action="/home/submit" method="get">
+            <%x=0%>
+            <% @courses.each do |course| %>
+            <%x+=1%>
+            <tr>
+                <td><%= course.campus %></td>
+                <td><%= course.haksu %></td>
+                <td><%= course.bunban %></td>
+                <td><%= course.isu_type %></td>
+                <td><%= course.course_name %></td>
+                <td><%= course.lecturer %></td>
+                <td><%= course.credit %></td>
+                <td><%= check_box_tag(:"rate#{x}")%></td>
+            </tr>
+            <% end %>
+            </tbody>
+            <div class = "d-flex justify-content-end">
+                <input type="submit" value="확정" class = "btn btn-danger btn-sm mb-2">	
+            </div>
+        </form>
     
-    <form action="/home/submit" method="get">
-    <%x=0%>
-    <% @courses.each do |course| %>
-    <%x+=1%>
-      <tr>
-        <td><%= course.campus %></td>
-        <td><%= course.haksu %></td>
-        <td><%= course.bunban %></td>
-        <td><%= course.isu_type %></td>
-        <td><%= course.course_name %></td>
-        <td><%= course.lecturer %></td>
-        <td><%= course.credit %></td>
-        <td><%= check_box_tag(:"rate#{x}")%></td>
-      </tr>
-
-     <% end %>
-
-    <input type="submit" value="확정">	
-    </form>
-    </tbody>
 </table>
 </div>

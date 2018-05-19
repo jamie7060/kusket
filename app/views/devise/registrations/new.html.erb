@@ -24,19 +24,19 @@
 
       <div class="field grey-font">
         <%= f.label :email, class: "label-font mb-1 mt-4"%><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "border-top-0 border-left-0 border-right-0 form-width-hj" %>
       </div>
       
       <!--닉네임-->
       <div class="field grey-font">
         <%= f.label :닉네임, class: "label-font mb-1 mt-2"%><br />
-        <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+        <%= f.text_field :username, autofocus: true, autocomplete: "username", class: "border-top-0 border-left-0 border-right-0 form-width-hj" %>
       </div>
       
       <!--학년-->
       <div class="field grey-font">
         <%= f.label :학년, class: "label-font mb-1 mt-2" %><br />
-        <%= f.text_field :grade, autofocus: true, autocomplete: "grade", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+        <%= f.text_field :grade, autofocus: true, autocomplete: "grade", class: "border-top-0 border-left-0 border-right-0 form-width-hj" %>
       </div>
       
       
@@ -45,16 +45,16 @@
         <% if @minimum_password_length %>
           <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
         <% end %><br />
-        <%= f.password_field :password, autocomplete: "off", class: "border-top-0 border-left-0 border-right-0 form-width"%>
+        <%= f.password_field :password, autocomplete: "off", class: "border-top-0 border-left-0 border-right-0 form-width-hj"%>
       </div>
 
       <div class="field grey-font">
         <%= f.label :password_confirmation, class: "label-font mb-1 mt-2" %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "off", class: "border-top-0 border-left-0 border-right-0 form-width" %>
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: "border-top-0 border-left-0 border-right-0 form-width-hj" %>
       </div>
 
-      <div class="actions d-flex align-items-center">
-        <%= f.submit t('.sign_up'), class: 'btn mt-3 btn-danger'%>
+      <div class="actions d-flex justify-content-center">
+        <%= f.submit t('.sign_up'), class: 'btn mt-4 btn-danger '%>
       </div>
     <% end %>
 

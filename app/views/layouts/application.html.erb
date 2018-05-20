@@ -4,18 +4,23 @@
     <title>Hackathon</title>
     <%= csrf_meta_tags %>
 
+    <link href="https://fonts.googleapis.com/css?family=Merienda+One|Muli" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert mb-0"><%= alert %></p>
-<% if user_signed_in? %>
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-  </li>
-<% end %>
-    <%= yield %>
+      <% if user_signed_in? %>
+      <div class = "my-4 text-center">
+        <%= link_to 'KUSKET', home_index_url, class: "brand-name miran"%>
+      </div>
+
+      <nav class = "nav nav-bg justify-content-end">
+        <%= link_to 'My_Basket', home_mypage_path, class: "nav-link nav-font muli"%>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link nav-font mr-5 muli"%>            
+      </nav>
+      <%end%>
+
+      <%=yield%>
   </body>
 </html>

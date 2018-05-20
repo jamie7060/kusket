@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
  
  def after_sign_in_path_for(user)
-  "http://localhost:3000/home/index"
+  "http://localhost:3000/home/rate"
 end
 
 
